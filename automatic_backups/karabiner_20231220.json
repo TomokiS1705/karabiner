@@ -171,26 +171,6 @@
                 "type": "basic"
               }
             ]
-          },
-          {
-            "description": "left_command + backspace to delete",
-            "manipulators": [
-              {
-                "from": {
-                  "key_code": "delete_or_backspace",
-                  "modifiers": {
-                    "mandatory": ["left_command"],
-                    "optional": ["any"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "delete_forward"
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
           }
         ]
       },
@@ -250,7 +230,7 @@
             "vendor_id": 0
           },
           "ignore": false,
-          "manipulate_caps_lock_led": true,
+          "manipulate_caps_lock_led": false,
           "mouse_flip_horizontal_wheel": false,
           "mouse_flip_vertical_wheel": false,
           "mouse_flip_x": false,
@@ -265,6 +245,16 @@
               "to": [
                 {
                   "key_code": "left_control"
+                }
+              ]
+            },
+            {
+              "from": {
+                "key_code": "left_control"
+              },
+              "to": [
+                {
+                  "key_code": "caps_lock"
                 }
               ]
             }
